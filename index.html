@@ -458,10 +458,13 @@
         <!-- action - не используется, джс в помощь// action="#" method="post"-->
         <form id="form" class="form js-speaker-form" autocomplete="on">
           <h3 class="title-form">Оставьте свои данные мы вам перезвоним</h3>
+
           <div class="form-filling">
             <label class="form-label" for="name">Имя </label>
-            <div class="form-field">
+
+            <div class="form-field form-focus">
               <input
+                class="form-focus"
                 type="text"
                 name="name"
                 id="name"
@@ -477,8 +480,15 @@
             </div>
 
             <label class="form-label" for="tel">Телефон</label>
-            <div class="form-field">
-              <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
+            <div class="form-field form-focus">
+              <input
+                class="form-focus"
+                type="tel"
+                name="tel"
+                id="tel"
+                pattern="[0-9]{10}"
+                required
+              />
               <span class="form-input">
                 <svg class="icon" width="13" height="13">
                   <use href="./images/sprite.svg#receiver"></use>
@@ -487,8 +497,8 @@
             </div>
 
             <label class="form-label" for="email">Почта</label>
-            <div class="form-field">
-              <input type="email" name="email" id="email" required />
+            <div class="form-field form-focus">
+              <input class="form-focus" type="email" name="email" id="email" required />
               <span class="form-input">
                 <svg class="icon" width="15" height="12">
                   <use href="./images/sprite.svg#email"></use>
@@ -496,9 +506,15 @@
               </span>
             </div>
 
-            <div class="form-field">
+            <div class="form-field form-focus">
               <label class="form-label" for="comment">Комментарий</label>
-              <textarea name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+              <textarea
+                class="form-focus"
+                name="comment"
+                id="comment"
+                rows="8"
+                placeholder="Введите текст"
+              ></textarea>
             </div>
           </div>
 
