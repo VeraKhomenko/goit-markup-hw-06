@@ -450,10 +450,29 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-sign">
+          <h3 class="features-uppercase dis">Подпишитесь на рассылку</h3>
+          <div class="footer-form flexlist">
+            <input class="footer-input-form" type="email" name="email" placeholder="E-mail" />
+            <button type="button" class="button button-footer flexlist">
+              Подписаться
+              <!-- <svg class="icon telegram" height="24" width="24">
+                <use href="./images/sprite.svg#telegram"></use>
+              </svg> -->
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <div class="button-close">
+          <button type="button" class="icon-close" data-modal-close>
+            <svg class="close" height="11" width="11">
+              <use href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
         <!-- форма -->
         <!-- action - не используется, джс в помощь// action="#" method="post"-->
         <form id="form" class="form js-speaker-form" autocomplete="on">
@@ -527,13 +546,6 @@
           </div>
           <div class="button-send">
             <button type="submit" class="button">Отправить</button>
-          </div>
-          <div class="button-close">
-            <button type="button" class="icon-close" data-modal-close>
-              <svg class="close" height="11" width="11">
-                <use href="./images/sprite.svg#close"></use>
-              </svg>
-            </button>
           </div>
         </form>
       </div>

@@ -1,3 +1,13 @@
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+} */
 /* основныe свойства */
 
 :root {
@@ -309,7 +319,7 @@ svg {
   margin-left: auto;
 }
 
-.main-menu .item+.item {
+.main-menu .item + .item {
   margin-left: 50px;
 }
 
@@ -378,7 +388,7 @@ svg {
   justify-content: center;
 }
 
-.main-filters .item+.item {
+.main-filters .item + .item {
   margin-left: 8px;
 }
 
@@ -436,7 +446,7 @@ li div.signature {
 /*footer подвал */
 .footer a {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footerlist li:first-child {
@@ -461,11 +471,11 @@ footer {
 .flexfooter {
   align-items: baseline;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .footer-address {
-  margin-right: 70px;
+  /* margin-right: 70px; */
   min-width: 231px;
   text-align: start;
 }
@@ -496,18 +506,60 @@ footer {
   margin-top: 10px;
 }
 
+.footer-form-sign {
+  display: inline-block;
+}
+.footer-form input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  background-color: var(--btn-footer-color);
+}
+.dis {
+  margin-bottom: 20px;
+}
+.footer-form .button-footer {
+  margin-left: 12px;
+  position: relative;
+  padding: 10px 28px;
+}
+.button-footer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  background: url(../images/telegram.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+.footer-input-form {
+  font: normal 400 16px/1.25 'Roboto', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 12px;
+}
+
+.footer-input-form::placeholder {
+  font: normal 400 16px/1.25 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
 /* подстили */
 
 /* кнопка-ссылка */
 .button {
-  display: inline-block;
+  /* display: inline-block; */
   min-width: 200px;
   padding: 10px 32px;
   text-align: center;
   border-radius: 4px;
   border: none;
   font: normal 700 16px/1.875 'Roboto', sans-serif;
-  text-align: center;
   background: var(--accent-color);
   color: var(--opposite-text-color);
   transition: background-color var(--time) var(--time-function);
@@ -623,19 +675,16 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-
 }
 
 .form-focus {
   transition: outline var(--time) var(--time-function);
-
 }
 
 .form-focus:focus-within {
   border: var(--accent-color);
   fill: var(--accent-color);
   outline-color: var(--accent-color);
-
 }
 
 .form-field textarea {
@@ -653,7 +702,7 @@ footer {
   width: 18px;
   height: 18px;
   /* outline: 1px solid orangered; */
-  transition: fill var(--time) var(--time-function)
+  transition: fill var(--time) var(--time-function);
 }
 
 .form-input .icon {
@@ -676,9 +725,23 @@ textarea::placeholder {
   position: absolute;
   z-index: -1;
   opacity: 0;
+  /* appearance: none; 
+  or
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  }
+
+  */
 }
 
-.custom-checkbox+label {
+.custom-checkbox + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -687,7 +750,7 @@ textarea::placeholder {
   margin-bottom: 30px;
 }
 
-.custom-checkbox+label::before {
+.custom-checkbox + label::before {
   content: '';
   display: inline-block;
   width: 17px;
@@ -700,19 +763,18 @@ textarea::placeholder {
   border-radius: 2px;
   margin-right: 8px;
   transition: fill var(--time) var(--time-function);
-
-}
 }
 
-.custom-checkbox+label:hover::before {
+.custom-checkbox + label:hover::before {
   fill: var(--accent-color);
 
   text-align: center;
 }
 
-.custom-checkbox:checked+label::before {
+.custom-checkbox:checked + label::before {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
+  background-origin: border-box;
 }
 
 .custom-checkbox-label a {
