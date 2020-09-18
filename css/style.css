@@ -631,6 +631,7 @@ footer {
 .icon-close:hover,
 .icon-close:focus {
   color: var(--accent-color);
+  outline: 1px rgba(0, 0, 0, 0.1);
 }
 
 .title-form {
